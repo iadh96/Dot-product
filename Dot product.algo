@@ -1,0 +1,52 @@
+PROCEDURE Dot_product(v1,v2: ARRAY_OF FLOAT)
+
+VAR
+    ps : FLOAT := 0;
+BEGIN 
+    FOR i FROM 0 TO v1.length-1 DO
+        ps := ps+(v1[i]*v2[i]);
+    END_FOR
+    IF (ps= 0) THEN
+    Write("ORTHOGONAL") 
+    ELSE
+    Write("NOT ORTHOGONAL!") 
+END
+
+ALGORITHM calculate_Dot_Product
+
+VAR
+   v1: ARRAY_OF FLOAT[];
+   v2: ARRAY_OF FLOAT[]; 
+BEGIN
+    Dot_Product(v1, v2);
+END
+
+// function 
+
+FUNCTION Dot_Product_function(v1,v2: ARRAY_OF FLOAT) : INTEGER
+
+VAR
+    ps : FLOAT := 0;
+BEGIN 
+        FOR i FROM 0 TO v1.length-1 DO
+        ps := ps+(v1[i]*v2[i]);
+    END_FOR
+    RETURN ps ;
+END
+
+ALGORITHM calculate_Dot_Product
+
+VAR
+   v1: ARRAY_OF FLOAT[];
+   v2: ARRAY_OF FLOAT[]; 
+BEGIN
+    Write ("t.");
+    Read (v1[i]);
+    Read (v2[i]);
+    END_FOR
+IF ( Dot_Product_function(v1,v2) = 0 ) THEN
+    Write("ORTHOGONAL") 
+    ELSE
+    Write("NOT ORTHOGONAL!") 
+END_IF
+END
